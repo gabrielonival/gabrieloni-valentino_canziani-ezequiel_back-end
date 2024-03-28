@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pacientes</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="odontologos.html">Odontólogos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="turnos.html">Turnos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+<div id="mensajes-pacientes" class="alert alert-success text-center" style="font-size: 20px;display:none;"></div>
+
+<div class="modal fade" id="modalDetallePaciente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="modalDetallePaciente">Detalle del Paciente</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="detallePaciente">
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div id="paciente-detalle" class="text-center mt-5 p-2 col-md-4">
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-8- mt-5">
+            <table class="table table-bordered table-hover text-center  table-dark">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Dni</th>
+                    <th>Fecha Ingreso</th>
+                    <th>Calle</th>
+                    <th>Numero</th>
+                    <th>Localidad</th>
+                    <th>Provincia</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody id="tbody-pacientes">
+            </table>
+        </div>
+        <div class="col-4 ml-auto" style="margin-top: 50px">
+            <div class="ml-5">
+                <div class="form-group">
+                    <input type="text" class="form-control font-italic" id="nombre" placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control font-italic" id="apellido" placeholder="Apellido">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control font-italic" id="dni" placeholder="Dni">
+                </div>
+                <div class="form-group">
+                    <input type="date" class="form-control font-italic" id="fechaIngreso" placeholder="Fecha Ingreso">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control font-italic" id="calle" placeholder="Calle">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control font-italic" id="numero" placeholder="Numero">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control font-italic" id="localidad" placeholder="Localidad">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control font-italic" id="provincia" placeholder="Provincia">
+                </div>
+                <input type="hidden" id="idPaciente"/>
+                <button id="guardarPaciente" class="btn btn-success btn-block">Registrar Paciente</button>
+                <button id="actualizarPaciente" class="btn btn-primary btn-block" style="display: none">Actualizar Paciente</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="./js/pacientes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
