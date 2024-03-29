@@ -1,7 +1,7 @@
 {
   "swagger":"2.0",
   "info":{
-    "description":"Proyecto integrador gestion de clinica odontologica",
+    "description":"Proyecto integrador de back-end gestion de clinica odontologica",
     "version":"1.0",
     "title":"backend-integrador"
   },
